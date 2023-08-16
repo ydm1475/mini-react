@@ -1,4 +1,4 @@
-import { TEXTTYPE } from "./constant";
+import { FRAGEMENT, TEXTTYPE } from "./constant";
 import {
   useCurrentFiber,
   useCurrentRoot,
@@ -68,7 +68,7 @@ export function useState(initial) {
 }
 
 export function createDom(fiber) {
-  if (fiber.type instanceof Function) {
+  if (fiber.type instanceof Function || fiber.type === FRAGEMENT) {
     return document.createDocumentFragment();
   }
   const dom =

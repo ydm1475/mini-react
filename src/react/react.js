@@ -1,4 +1,4 @@
-import { TEXTTYPE } from "./constant";
+import { FRAGEMENT, TEXTTYPE } from "./constant";
 import { commitRender, createRoot } from "./fiber";
 class Component {
   constructor(props) {
@@ -36,8 +36,9 @@ class MiniReact {
     };
   };
   createElement = (type, config, ...children) => {
+    console.log('type', type, config, children);
     return {
-      type,
+      type: type || FRAGEMENT,
       props: {
         ...config,
         children: children.map((child) =>

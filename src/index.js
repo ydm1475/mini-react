@@ -2,8 +2,6 @@ import "./react/index.js";
 import { useState } from "./react/fiber.js";
 import "./style.css";
 
-
-
 class Counter extends React.Component {
   state = {
     count: 1,
@@ -93,9 +91,9 @@ var App = () => {
   });
   return (
     <div id="app">
-      {state.countOneVisible ? <Counter></Counter> : <div></div>}
-      {state.menuVisible ? <Menu></Menu> : <div></div>}
-      {state.countTwoVisible ? <CounterFn></CounterFn> : <div></div>}
+      {state.countOneVisible ? <Counter></Counter> : <></>}
+      {state.menuVisible ? <Menu></Menu> : <></>}
+      {state.countTwoVisible ? <CounterFn></CounterFn> : <></>}
       <div>
         <button
           className="button"
