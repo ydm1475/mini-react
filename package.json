@@ -1,0 +1,29 @@
+{
+  "name": "mini-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --config webpack.config.js ",
+    "build": "babel main.js -o bundle.js -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-react": "^7.22.5",
+    "babel-loader": "^9.1.3",
+    "html-webpack-plugin": "^5.5.3",
+    "source-map-loader": "^4.0.1",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.22.10",
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
